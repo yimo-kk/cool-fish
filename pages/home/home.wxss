@@ -1,0 +1,44 @@
+/* pages/home/home.wxss */
+
+/* 导入模板中的wxss */
+@import "/temlates/tips/tip1.wxss";
+@import "/temlates/tip2/tip2.wxss";
+@import "/temlates/course/course.wxss";
+@import "/temlates/video/video.wxss";
+
+swiper {
+  width: 750rpx;
+  height: 400rpx;
+}
+
+swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+.tips {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.scroll {
+  /* width:2000rpx; */
+  white-space: nowrap;
+  height: 180rpx;
+  /* background-color: red; */
+}
+
+.content {
+  padding: 10rpx 0 0 10rpx;
+}
+
+.remm .tit {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20rpx;
+}
+.remm .content {
+    display: flex;
+  flex-wrap: wrap;
+}

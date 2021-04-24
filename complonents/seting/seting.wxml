@@ -1,0 +1,20 @@
+<!--complonents/seting/seting.wxml-->
+<!-- 导入 wxs 模块封装的方法 -->
+<wxs src="../../utils/format.wxs" module="format" />
+<!-- 创建一个组件 -->
+<!-- 当点击这一行(这个组件的任何地方都会跳转),注册一个点击事件,并传参,需要点击是获取的本行的类型值(type)
+和跳转的路径 -->
+<view bindtap='goToDetail' data-type='{{obj.type}}' data-path='{{obj.navigateTo}}' class='setUsers'>
+  <!-- 接受到数据后直接使用 -->
+  <text class='title'>{{obj.title}}</text>
+  <!-- 判断type的类型执行数据不同 -->
+  <block wx:if="{{obj.type == 'date'}}">
+    <text class='time'>{{format.formatTime(obj.date)}}</text>
+  </block>
+  <block wx:if="{{obj.type == 'arrow'}}">
+    <image src="{{obj.img_url}}"></image>
+  </block>
+  <block wx:if="{{obj.type == 'switch'}}">
+    <switch checked />
+  </block>
+</view>

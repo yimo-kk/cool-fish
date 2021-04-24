@@ -1,0 +1,19 @@
+<!--pages/mine/mine.wxml-->
+<view>
+  <!-- 头像和名字 -->
+  <view class='users'>
+    <image src="/images/头像 男孩.png" />
+    <text>yimo</text>
+  </view>
+  <!-- 内容区域 -->
+  <view>
+    <seting obj="{{expiresDate}}" />
+  </view>
+  <view>
+    <!-- 需要遍历把数据传到组件中 -->
+    <block wx:for="{{seting}}" wx:key='item.id'>
+      <!-- 遍历出来的数据展开传到组件上面 -->
+      <seting obj="{{item}}" />
+    </block>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+<!--pages/course/course.wxml-->
+<view>
+  <!-- 引用组件时进行传值 -->
+  <block wx:for="{{courses}}" wx:key="{{item.id}}">
+    <c-component obj="{{item}}" />
+  </block>
+
+</view>

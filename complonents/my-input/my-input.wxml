@@ -1,0 +1,13 @@
+<!--complonents/my-input/my-input.wxml-->
+
+<view class='my-input'>
+<!-- 需要获取输入框中的数据 这里注册一个失去焦点的事件 并且要传入一个参数 -->
+  <input data-type="{{obj.type}}" bindblur="getval" type='number' placeholder="{{obj.placeholder}}">
+  </input>
+  <block wx:if="{{mytitle}}">
+    <view bindtap='getData'>
+    <!-- 当点击获取验证码时需要注册一个点击事假 -->
+      <text  class='title' style='color:{{isCountDown ? "#999":"#000"}}'>{{mytitle}}</text>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,12 @@
+.tip { 
+  display: flex;
+  align-items: center
+}
+.tip image {
+  width: 30rpx; 
+ height: 30rpx
+}
+.tip text {
+  font-size: 12px;
+  color:#999
+}

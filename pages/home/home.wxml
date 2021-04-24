@@ -1,0 +1,41 @@
+<!--pages/home/home.wxml-->
+<!-- 导入模板 -->
+<import src="/temlates/tips/tip1.wxml" />
+<import src="/temlates/tip2/tip2.wxml" />
+<import src="/temlates/course/course.wxml" />
+<import src="/temlates/video/video.wxml" />
+<view>
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{3000}}" duration="{{1000}}" indicator-active-color="#fff" circular>
+    <block wx:for="{{Swipers}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item.img_url}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 热门课程 -->
+  <view class='tips'>
+    <template is="tip1" data="{{...hotCourse}}"></template>
+    <template is="tip2" data="{{...more}}"></template>
+  </view>
+  <!-- 热门课程内容 -->
+  <view class='content'>
+    <scroll-view scroll-x class='scroll'>
+      <block wx:for="{{courses}}" wx:key="{{item.id}}">
+        <template is="course" data="{{...item}}"></template>
+      </block>
+    </scroll-view>
+  </view>
+  <!-- 推荐视频头 -->
+  <view class='remm'>
+    <view class='tit'>
+      <template is="tip1" data="{{...recommendVideo}}"></template>
+    </view>
+    <!-- 推荐视频内容 -->
+    <view class='content'>
+      <block wx:for="{{videos}}" wx:key="item.id">
+        <template is="video" data="{{...item}}"></template>
+      </block>
+    </view>
+  </view>
+
+</view>

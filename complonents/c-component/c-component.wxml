@@ -1,0 +1,19 @@
+<!--complonents/c-component/c-component.wxml-->
+<!-- 创建一个组件 -->
+<view class='course'>
+  <!-- 要遍历传过来的数据 -->
+  <image src='{{obj.img_url}}'></image>
+  <view class='title'>
+    <view>
+      <text class='title1'>{{obj.title}}</text>
+    </view>
+    <view>
+      <text class='"subtitle"'>{{obj.subtitle}}</text>
+    </view>
+    </view>
+    <!-- 这里有一个点击事件需要用到事件冒泡来注册 -->
+    <view bindtap='sendData' data-id="{{obj.id}}" data-is-full="{{obj.isFull}}" style='background-color:{{obj.isFull?"#cacaca":"#ff547c"}}' class='tips'>
+     <text>{{obj.isFull ? '人数已满' : '了解课程'}}</text>
+    </view>
+  
+</view>

@@ -1,0 +1,22 @@
+/* complonents/seting/seting.wxss */
+
+.setUsers {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx
+}
+
+.setUsers .title {
+  font-size: 16px;
+}
+.time {
+  font-size: 12px;
+  color: #999
+}
+
+.setUsers image {
+  width: 60rpx;
+  height: 60rpx;
+}

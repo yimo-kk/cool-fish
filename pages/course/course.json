@@ -1,0 +1,5 @@
+{
+  "usingComponents":{
+    "c-component": "../../complonents/c-component/c-component"
+  }
+}

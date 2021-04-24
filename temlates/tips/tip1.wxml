@@ -1,0 +1,7 @@
+<!-- 定义一个模板 -->
+<template name="tip1">
+<view class='tip'>
+<image src='{{img_url}}'> </image>
+<text>{{content}}</text>
+</view>
+</template>

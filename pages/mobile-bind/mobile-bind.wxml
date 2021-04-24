@@ -1,0 +1,14 @@
+<!--pages/mobile-bind/mobile-bind.wxml-->
+<!-- 绑定手机号页面,并修改页面的头部通过 navigationBarTitleText方法在json文件注册 -->
+<view>
+  <view class='my-inputs'>
+    <!-- 输入框 -->
+    <my-input obj="{{mobile}}" />
+    <my-input class='vcode' obj="{{vcode}}" />
+    <text class='font'>绑定手机号成功后可以免费获取三天VIP体验哦~~</text>
+  </view>
+  <!-- 绑定手机号的按钮 ,注册一个点击事件-->
+  <view class='bind' bindtap='bindMobile' >
+    <text>绑定手机号</text>
+  </view>
+</view>
